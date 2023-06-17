@@ -55,7 +55,7 @@
                         </svg>
                     </button>
                 </li>
-                <li class="search">
+                <li class="search" id="openModalBtn2">
                     <button type="button" name="search">
                         <span class="visually-hidden">Search</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -72,7 +72,7 @@
             <h1>Portfolio PSD Template</h1>
             <p class="description">Nam liber tempor cum soluta nobis eleifend option congue nihil imper
                 diet doming id quod mazim placerat facer possim assum.</p>
-            <button class="custom-button" type="button" id="openModalBtn2">get started</button>
+            <button class="custom-button" type="button" >get started</button>
         </div>
     </div>
     <main>
@@ -477,26 +477,18 @@
         </div>
     </div>
 
-    <div id="myModal2" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <form id="myForm" data-parsley-validate>
-                <label for="phone">Номер телефона:</label>
-                <input type="text" id="phone" data-parsley-trigger="change" placeholder="80 XX XXX XX XX" required>
+   
 
-                <label for="birthdate">Дата рождения:</label>
-                <input type="text" id="birthdate" data-parsley-trigger="change" placeholder="дд.мм.гггг" required>
-
-                <label for="creditcard">Номер кредитной карты:</label>
-                <input type="text" id="creditcard" data-parsley-trigger="change" placeholder="XXXX XXXX XXXX XXXX"
-                    required>
-
-                <button type="submit">Отправить</button>
-                <button id="clearButton" type="submit">Очистить</button>
-            </form>
-
-        </div>
+       <!-- Модальное окно 2 -->
+<div id="myModal2" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Модальное окно 2</h2>
+      <input type="text" id="searchInput2" placeholder="Введите текст для поиска">
+      <button id="searchButton2">Поиск</button>
+      <div id="searchResults2"></div>
     </div>
+  </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
