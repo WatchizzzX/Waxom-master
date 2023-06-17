@@ -49,7 +49,7 @@ closeBtn.onclick = function() {
   }
 
   modal.style.display = "none";
-  document.body.style.overflow = "auto"; // Включение прокрутки заднего фона
+  document.body.style.overflow = "auto"; 
 };
 
 // Закрытие второго модального окна при нажатии на крестик
@@ -59,19 +59,19 @@ closeBtn2.onclick = function() {
   }
 
   modal2.style.display = "none";
-  document.body.style.overflow = "auto"; // Включение прокрутки заднего фона
+  document.body.style.overflow = "auto"; /
 };
 
 // Закрытие модальных окон при клике вне них
 window.onclick = function(event) {
   if (event.target == modal && !isOpen) {
     modal.style.display = "none";
-    document.body.style.overflow = "auto"; // Включение прокрутки заднего фона
+    document.body.style.overflow = "auto"; 
   }
 
   if (event.target == modal2 && !isOpen2) {
     modal2.style.display = "none";
-    document.body.style.overflow = "auto"; // Включение прокрутки заднего фона
+    document.body.style.overflow = "auto"; 
   }
 };
 
@@ -93,7 +93,7 @@ var creditcardInput = document.getElementById('creditcard');
 
 var phoneCleave = new Cleave(phoneInput, {
     phone: true,
-    phoneRegionCode: 'BY' // Код страны для форматирования номера телефона (в данном случае, Россия)
+    phoneRegionCode: 'BY' 
 });
 
 // Инициализация Cleave.js для форматирования полей
@@ -113,7 +113,6 @@ form.addEventListener('submit', function(event) {
     event.preventDefault();
     if (form.checkValidity()) {
         alert('Форма заполнена корректно.');
-        // Здесь можно добавить код для отправки данных формы на сервер
     }
 });
 $(document).ready(function () {
