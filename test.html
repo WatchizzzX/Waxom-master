@@ -72,7 +72,7 @@
             <h1>Portfolio PSD Template</h1>
             <p class="description">Nam liber tempor cum soluta nobis eleifend option congue nihil imper
                 diet doming id quod mazim placerat facer possim assum.</p>
-            <button class="custom-button" type="button">get started</button>
+            <button class="custom-button" type="button" id="openModalBtn2">get started</button>
         </div>
     </div>
     <main>
@@ -457,6 +457,27 @@
         </div>
     </footer>
     <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="myForm" data-parsley-validate>
+                <label for="phone">Номер телефона:</label>
+                <input type="text" id="phone" data-parsley-trigger="change" placeholder="80 XX XXX XX XX" required>
+
+                <label for="birthdate">Дата рождения:</label>
+                <input type="text" id="birthdate" data-parsley-trigger="change" placeholder="дд.мм.гггг" required>
+
+                <label for="creditcard">Номер кредитной карты:</label>
+                <input type="text" id="creditcard" data-parsley-trigger="change" placeholder="XXXX XXXX XXXX XXXX"
+                    required>
+
+                <button type="submit">Отправить</button>
+                <button id="clearButton" type="submit">Очистить</button>
+            </form>
+
+        </div>
+    </div>
+
+    <div id="myModal2" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <form id="myForm" data-parsley-validate>
