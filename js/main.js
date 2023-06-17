@@ -59,7 +59,7 @@ closeBtn2.onclick = function() {
   }
 
   modal2.style.display = "none";
-  document.body.style.overflow = "auto"; /
+  document.body.style.overflow = "auto"; 
 };
 
 // Закрытие модальных окон при клике вне них
