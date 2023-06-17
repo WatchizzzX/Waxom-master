@@ -100,11 +100,16 @@ a {
     position: relative;
 }
 
+// ::-webkit-scrollbar {
+//     width: 0
+// }
+
 .swiper-wrapper {
     position: absolute;
     height: 100vh;
     z-index: -1;
     font-family: "montserrat-light", "Areal", sans-serif;
+    
 }
 
 .swiper-pagination {
@@ -114,6 +119,7 @@ a {
 
 .swiper-slide{
     background-size:cover;
+    overflow-x: scroll;
 }
 
 .postSwiper {
