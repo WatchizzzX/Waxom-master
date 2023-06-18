@@ -933,11 +933,15 @@ header {
   }
   
   .modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column  ;
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 300px;
+    width: 60%;height: 70%;
   }
   
   .close {
@@ -968,10 +972,12 @@ header {
   }
   
   button[type="submit"] {
+    width: 400px;
+    height: 400px;
     padding: 10px 20px;
     background-color: #4caf50;
     color: white;
-    border: none;
+    border: 30px solid black;
     cursor: pointer;
     &:hover {
       background-color: #45a049;
