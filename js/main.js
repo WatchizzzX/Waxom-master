@@ -129,3 +129,37 @@ var clearButton = document.getElementById('clearButton');
 clearButton.onclick = function() {
     form.reset();
 }
+
+// Получение элементов
+const tabs = document.querySelectorAll('.project-tabs button');
+const projects = document.querySelectorAll('.project');
+
+// Добавление обработчика события для каждой вкладки
+tabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    // Проверка, является ли выбранная вкладка уже активной
+    if (tab.classList.contains('active')) {
+      return; // Ничего не делаем, если вкладка уже активна
+    }
+
+    // Удаление активного класса у всех вкладок
+    tabs.forEach((tab) => {
+      tab.classList.remove('active');
+    });
+
+    // Добавление активного класса для выбранной вкладки
+    tab.classList.add('active');
+
+    // Получение типа выбранной вкладки
+    const type = tab.textContent.toLowerCase();
+
+    // Отображение или скрытие проектов в зависимости от выбранной вкладки
+    projects.forEach((project) => {
+      const projectType = project.querySelector('.themes').textContent.toLowerCase();
+      const isVisible = type === 'all' || projectType.includes(type);
+      project.style.display = isVisible ? 'block' : 'none';
+    });
+  });
+});
+
+
