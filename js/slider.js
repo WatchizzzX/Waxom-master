@@ -19,5 +19,5 @@ var postSwiper = new Swiper('.postSwiper', {
     },
     spaceBetween: 31,
     slidesPerView: 3,
-    loop: false
+    loop: true,
 });

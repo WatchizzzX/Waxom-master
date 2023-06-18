@@ -14,14 +14,15 @@ btn.onclick = function() {
   // Проверка состояния первого модального окна
   if (!isOpen) {
     isOpen = true;
-
+    modal.classList.add('animatedIn');
     modal.style.display = "block";
-    document.body.style.overflow = "hidden"; // Блокировка прокрутки заднего фона
+    // document.body.style.overflow = "hidden"; // Блокировка прокрутки заднего фона
 
     // Задержка перед закрытием первого модального окна (в миллисекундах)
     var delayInMilliseconds = 500;
     setTimeout(function() {
       isOpen = false;
+      modal.classList.remove('animatedIn')
     }, delayInMilliseconds);
   }
 };
@@ -30,14 +31,18 @@ btn2.onclick = function() {
   // Проверка состояния второго модального окна
   if (!isOpen2) {
     isOpen2 = true;
+    modal2.classList.add('animatedIn');
 
+    
     modal2.style.display = "block";
-    document.body.style.overflow = "hidden"; // Блокировка прокрутки заднего фона
+    // document.body.style.overflow = "hidden"; // Блокировка прокрутки заднего фона
 
     // Задержка перед закрытием второго модального окна (в миллисекундах)
     var delayInMilliseconds = 500;
     setTimeout(function() {
       isOpen2 = false;
+      modal2.classList.remove('animatedIn')
+
     }, delayInMilliseconds);
   }
 };
