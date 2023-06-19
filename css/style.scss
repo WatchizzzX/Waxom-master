@@ -968,13 +968,13 @@ header {
   }
   
   button[type="submit"] {
-    width: 400px;
+    width: 200px;
     margin-right: auto;
-    height: 400px;
+    height: 50px;
     padding: 10px 20px;
     background-color: #4caf50;
     color: white;
-    border: 30px solid black;
+    border: 5px solid black;
     cursor: pointer;
     &:hover {
       background-color: #45a049;
