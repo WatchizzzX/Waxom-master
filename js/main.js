@@ -8,7 +8,20 @@ const btn2 = document.getElementById("openModalBtn2");
 const closeBtn = document.getElementsByClassName("close")[0];
 const closeBtn2 = document.getElementsByClassName("close")[1];
 var isOpen = false; // Флаг для отслеживания состояния первого модального окна
-var isOpen2 = false; // Флаг для отслеживания состояния второго модального окна
+var isOpen2 = false; 
+
+
+// Добавляем обработчик события keydown
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' || event.keyCode === 27) {
+    const delayInMilliseconds = 500; 
+
+    setTimeout(function() {
+      myModal.style.display = 'none';
+      myModal2.style.display = 'none';
+    }, delayInMilliseconds);
+  }
+});
 
 btn.onclick = function() {
   // Проверка состояния первого модального окна
