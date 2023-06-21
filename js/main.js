@@ -1,172 +1,163 @@
-//Анимация
 AOS.init();
 
-const modal = document.getElementById("myModal");
-const modal2 = document.getElementById("myModal2");
-const btn = document.getElementById("openModalBtn");
-const btn2 = document.getElementById("openModalBtn2");
-const closeBtn = document.getElementsByClassName("close")[0];
-const closeBtn2 = document.getElementsByClassName("close")[1];
-var isOpen = false; // Флаг для отслеживания состояния первого модального окна
-var isOpen2 = false; 
+const purchase_modal = document.getElementById("purchase-modal");
+const search_modal = document.getElementById("search_modal");
+
+const purchase_form = document.getElementById('purchase-form');
+const clearButton = document.getElementById('clearButton');
+
+const openSearchBtn = document.getElementById("openSearchBtn");
+const openPurchaseBtn = document.getElementById("openPurchaseBtn");
+const closePurchaseBtn = document.getElementsByClassName("close")[0];
+const closeSearchBtn = document.getElementsByClassName("close")[1];
+
+var isPurchaseModalOpen = false;
+var isSearchModalOpen = false;
+
+const searchBtn = document.getElementById("searchButton");
+const searchInput = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
+
+const tabs = document.querySelectorAll('.project-tabs button');
+const projects = document.querySelectorAll('.project');
+
+const phoneInput = document.getElementById('phone');
+const birthdateInput = document.getElementById('bi  rthdate');
+const creditcardInput = document.getElementById('creditCard');
 
 
-// Добавляем обработчик события keydown
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape' || event.keyCode === 27) {
-    const delayInMilliseconds = 500; 
 
-    setTimeout(function() {
-      myModal.style.display = 'none';
-      myModal2.style.display = 'none';
-    }, delayInMilliseconds);
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    if (!isSearchModalOpen) {
+      search_modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+    if (!isPurchaseModalOpen) {
+      purchase_modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
   }
 });
 
-btn.onclick = function() {
-  // Проверка состояния первого модального окна
-  if (!isOpen) {
-    isOpen = true;
-    modal.classList.add('animatedIn');
-    modal.style.display = "block";
-    // document.body.style.overflow = "hidden"; // Блокировка прокрутки заднего фона
+window.onclick = function (event) {
+  if (event.target == purchase_modal && !isPurchaseModalOpen) {
+    purchase_modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+
+  if (event.target == search_modal && !isSearchModalOpen) {
+    search_modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+};
+
+openSearchBtn.addEventListener("click", openSearchModal);
+openPurchaseBtn.addEventListener("click", openPurchaseModal);
+closeSearchBtn.addEventListener("click", closeSearchModal);
+closePurchaseBtn.addEventListener("click", closePurchaseModal);
+searchBtn.addEventListener("click", searchInfo);
+
+function openSearchModal() {
+  if (!isSearchModalOpen) {
+    isSearchModalOpen = true;
+    search_modal.classList.add('animatedIn');
+    search_modal.style.display = "block";
+    document.body.style.overflow = "hidden"; // Блокировка прокрутки заднего фона
 
     // Задержка перед закрытием первого модального окна (в миллисекундах)
     const delayInMilliseconds = 500;
-    setTimeout(function() {
-      isOpen = false;
-      modal.classList.remove('animatedIn')
+    setTimeout(function () {
+      isSearchModalOpen = false;
+      search_modal.classList.remove('animatedIn')
     }, delayInMilliseconds);
   }
-};
+}
 
-btn2.onclick = function() {
-  // Проверка состояния второго модального окна
-  if (!isOpen2) {
-    isOpen2 = true;
-    modal2.classList.add('animatedIn');
-
-    
-    modal2.style.display = "block";
-    // document.body.style.overflow = "hidden"; // Блокировка прокрутки заднего фона
+function openPurchaseModal() {
+  if (!isPurchaseModalOpen) {
+    isPurchaseModalOpen = true;
+    purchase_modal.classList.add('animatedIn');
+    purchase_modal.style.display = "block";
+    document.body.style.overflow = "hidden"; // Блокировка прокрутки заднего фона
 
     // Задержка перед закрытием второго модального окна (в миллисекундах)
     const delayInMilliseconds = 500;
-    setTimeout(function() {
-      isOpen2 = false;
-      modal2.classList.remove('animatedIn')
-
+    setTimeout(function () {
+      isPurchaseModalOpen = false;
+      purchase_modal.classList.remove('animatedIn')
     }, delayInMilliseconds);
   }
-};
+}
 
-// Закрытие модальных окон при нажатии на крестик
-closeBtn.onclick = function() {
-  if (isOpen) {
-    return; // Если первое модальное окно находится в процессе закрытия, прерываем обработчик
+function closeSearchModal() {
+  if (isSearchModalOpen) {
+    return;
   }
 
-  modal.style.display = "none";
-  document.body.style.overflow = "auto"; 
-};
+  search_modal.style.display = "none";
+  document.body.style.overflow = "auto";
+}
 
-// Закрытие второго модального окна при нажатии на крестик
-closeBtn2.onclick = function() {
-  if (isOpen2) {
-    return; // Если второе модальное окно находится в процессе закрытия, прерываем обработчик
+function closePurchaseModal() {
+  if (isPurchaseModalOpen) {
+    return;
   }
 
-  modal2.style.display = "none";
-  document.body.style.overflow = "auto"; 
-};
+  purchase_modal.style.display = "none";
+  document.body.style.overflow = "auto";
+}
 
-// Закрытие модальных окон при клике вне них
-window.onclick = function(event) {
-  if (event.target == modal && !isOpen) {
-    modal.style.display = "none";
-    document.body.style.overflow = "auto"; 
-  }
-
-  if (event.target == modal2 && !isOpen2) {
-    modal2.style.display = "none";
-    document.body.style.overflow = "auto"; 
-  }
-};
-
-
-document.getElementById("searchButton2").onclick = function() {
-  const searchInput = document.getElementById("searchInput2");
-  const searchResults = document.getElementById("searchResults2");
-
-  // Выполняем поиск и отображаем результаты
+function searchInfo() {
   const searchText = searchInput.value;
   searchResults.innerHTML = "Результаты поиска для \"" + searchText + "\"";
 }
 
-
-// Инициализация Cleave.js для форматирования полей
-const phoneInput = document.getElementById('phone');
-const birthdateInput = document.getElementById('birthdate');
-const creditcardInput = document.getElementById('creditcard');
-
 const phoneCleave = new Cleave(phoneInput, {
-    phone: true,
-    phoneRegionCode: 'BY' 
+  phone: true,
+  phoneRegionCode: 'BY'
 });
 
 // Инициализация Cleave.js для форматирования полей
 const birthdateCleave = new Cleave(birthdateInput, {
-    date: true,
-    datePattern: ['d', 'm', 'Y']
+  date: true,
+  datePattern: ['d', 'm', 'Y']
 });
 
 const creditcardCleave = new Cleave(creditcardInput, {
-    creditCard: true
+  creditCard: true
 });
 
 
-// Инициализация Parsley.js для проверки полей формы
-const form = document.getElementById('myForm');
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    if (form.checkValidity()) {
-        alert('Форма заполнена корректно.');
-    }
+purchase_form.addEventListener('submit', function () {
+  if (purchase_form.checkValidity()) {
+    alert('Форма заполнена корректно.');
+  }
 });
+
 $(document).ready(function () {
-    $("#myForm").parsley();
-});  
+  $("#myForm").parsley();
+});
 
-// Очистка полей формы
-const clearButton = document.getElementById('clearButton');
-clearButton.onclick = function() {
-    form.reset();
-}
+clearButton.addEventListener("click", function () {
+  purchase_form.reset();
+});
 
-// Получение элементов
-const tabs = document.querySelectorAll('.project-tabs button');
-const projects = document.querySelectorAll('.project');
 
-// Добавление обработчика события для каждой вкладки
 tabs.forEach((tab) => {
   tab.addEventListener('click', () => {
-    // Проверка, является ли выбранная вкладка уже активной
     if (tab.classList.contains('active')) {
-      return; // Ничего не делаем, если вкладка уже активна
+      return;
     }
 
-    // Удаление активного класса у всех вкладок
     tabs.forEach((tab) => {
       tab.classList.remove('active');
     });
 
-    // Добавление активного класса для выбранной вкладки
     tab.classList.add('active');
 
-    // Получение типа выбранной вкладки
     const type = tab.textContent.toLowerCase();
 
-    // Отображение или скрытие проектов в зависимости от выбранной вкладки
     projects.forEach((project) => {
       const projectType = project.querySelector('.themes').textContent.toLowerCase();
       const isVisible = type === 'all' || projectType.includes(type);

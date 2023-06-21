@@ -58,7 +58,7 @@
                         </svg>
                     </button>
                 </li>
-                <li class="search" id="openModalBtn2">
+                <li class="search" id="openSearchBtn">
                     <button type="button" name="search">
                         <span class="visually-hidden">Search</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -134,7 +134,7 @@
                 <h2><span>Waxom</span> Multipurpose WordPress Theme</h2>
                 <p>Don't Forget to Rate the Template. Thanks so much!</p>
             </div>
-            <button class="custom-button" type="button" id="openModalBtn">purchase now</button>
+            <button class="custom-button" type="button" id="openPurchaseBtn">purchase now</button>
         </section>
         <section class="latest-projects">
             <h2>Our Latest Projects.</h2>
@@ -225,7 +225,7 @@
                 </ul>
             </div>
         </section>
-        <section class="statistics">
+        <div class="statistics">
             <ul class="statistics-list">
                 <li>
                     <svg class="statistic-icon" xmlns="http://www.w3.org/2000/svg" width="44" height="44">
@@ -268,7 +268,7 @@
                     <p>we launched</p>
                 </li>
             </ul>
-        </section>
+        </div>
         <section class="recent-posts">
             <h2>Recent Posts</h2>
             <p class="section-description">Investigationes demonstraverunt lectores legere me lius quod ii legunt
@@ -368,14 +368,14 @@
                 </li>
             </ul>
         </section>
-        <section class="sponsors">
+        <div class="sponsors">
             <ul>
                 <li><img src="/img/logo-01.png" alt="sponsor logo"></li>
                 <li><img src="/img/logo-02.png" alt="sponsor logo"></li>
                 <li><img src="/img/logo-03.png" alt="sponsor logo"></li>
                 <li><img src="/img/logo-04.png" alt="sponsor logo"></li>
             </ul>
-        </section>
+        </div>
     </main>
     <footer>
         <div class="info-content">
@@ -457,10 +457,10 @@
             </ul>
         </div>
     </footer>
-    <div id="myModal" class="modal">
+    <div id="purchase-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <form id="myForm" data-parsley-validate>
+            <form id="purchase-form" data-parsley-validate>
                 <label for="phone">Номер телефона:</label>
                 <input type="text" id="phone" data-parsley-trigger="change" placeholder="80 XX XXX XX XX" required>
 
@@ -468,7 +468,7 @@
                 <input type="text" id="birthdate" data-parsley-trigger="change" placeholder="дд.мм.гггг" required>
 
                 <label for="creditcard">Номер кредитной карты:</label>
-                <input type="text" id="creditcard" data-parsley-trigger="change" placeholder="XXXX XXXX XXXX XXXX"
+                <input type="text" id="creditCard" data-parsley-trigger="change" placeholder="XXXX XXXX XXXX XXXX"
                     required>
 
                 <button type="submit">Отправить</button>
@@ -478,12 +478,12 @@
         </div>
     </div>
 
-    <div id="myModal2" class="modal">
+    <div id="search_modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <input type="text" id="searchInput2" placeholder="Введите текст для поиска">
-            <button id="searchButton2">Поиск</button>
-            <div id="searchResults2"></div>
+            <input type="text" id="searchInput" placeholder="Введите текст для поиска">
+            <button id="searchButton">Поиск</button>
+            <div id="searchResults"></div>
         </div>
     </div>
 
