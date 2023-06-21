@@ -1,34 +1,34 @@
 @font-face {
-    font-family: raleway-regular; /* Гарнитура шрифта */
-    src: url("../fonts/raleway/raleway-regular.ttf"); /* Путь к файлу со шрифтом */
+    font-family: raleway-regular;
+    src: url("../fonts/raleway/raleway-regular.ttf");
 }
 @font-face {
-    font-family: raleway-medium; /* Гарнитура шрифта */
-    src: url("../fonts/raleway/raleway-medium.ttf"); /* Путь к файлу со шрифтом */
+    font-family: raleway-medium;
+    src: url("../fonts/raleway/raleway-medium.ttf");
 }
 @font-face {
-    font-family: raleway-bold; /* Гарнитура шрифта */
-    src: url("../fonts/raleway/raleway-bold.ttf"); /* Путь к файлу со шрифтом */
+    font-family: raleway-bold;
+    src: url("../fonts/raleway/raleway-bold.ttf");
 }
 @font-face {
-    font-family: raleway-extrabold; /* Гарнитура шрифта */
-    src: url("../fonts/raleway/raleway-extrabold.ttf"); /* Путь к файлу со шрифтом */
+    font-family: raleway-extrabold;
+    src: url("../fonts/raleway/raleway-extrabold.ttf");
 }
 @font-face {
-    font-family: raleway-semibold; /* Гарнитура шрифта */
-    src: url("../fonts/raleway/raleway-semibold.ttf"); /* Путь к файлу со шрифтом */
+    font-family: raleway-semibold;
+    src: url("../fonts/raleway/raleway-semibold.ttf");
 }
 @font-face {
-    font-family: montserrat-light; /* Гарнитура шрифта */
-    src: url("../fonts/montserrat/montserrat-light.ttf"); /* Путь к файлу со шрифтом */
+    font-family: montserrat-light;
+    src: url("../fonts/montserrat/montserrat-light.ttf");
 }
 @font-face {
-    font-family: montserrat-ultralight; /* Гарнитура шрифта */
-    src: url("../fonts/montserrat/montserrat-ultralight.ttf"); /* Путь к файлу со шрифтом */
+    font-family: montserrat-ultralight;
+    src: url("../fonts/montserrat/montserrat-ultralight.ttf");
 }
 @font-face {
-    font-family: montserrat-regular; /* Гарнитура шрифта */
-    src: url("../fonts/montserrat/montserrat-regular.ttf"); /* Путь к файлу со шрифтом */
+    font-family: montserrat-regular;
+    src: url("../fonts/montserrat/montserrat-regular.ttf");
 }
 
 * {
@@ -126,12 +126,10 @@ header {
     align-items: center;
     padding-top: 55px;
 }
-.test {
-    fill: #00bff3;
-}
 
 .logo {
     font-family: "raleway-medium", "Areal", sans-serif;
+
     a {
         display: flex;
         align-items: center;
@@ -151,6 +149,7 @@ header {
         svg {
             fill: #c7b299;
         }
+
         span {
             color: #c7b299;
         }
@@ -302,12 +301,14 @@ header {
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 770px 482px, 770px 400px, 770px 400px;
     background-position: center 219px, 346px 301px, 806px 301px;
+
     h2 {
         font-size: 28px;
         color: #555555;
         font-family: "raleway-semibold", "Arial", sans-serif;
         text-align: center;
     }
+
     p {
         font-size: 16px;
         font-family: "montserrat-light", "Arial", sans-serif;
@@ -345,12 +346,14 @@ header {
     margin-top: 80px;
     margin-bottom: 80px;
     text-align: center;
+
     h2 {
         margin-bottom: 24px;
         font-size: 30px;
         color: #555555;
         font-family: "raleway-semibold", "Arial", sans-serif;
     }
+
     .description {
         font-size: 16px;
         line-height: 28px;
@@ -405,6 +408,7 @@ header {
     height: 338px;
     text-align: left;
     background-color: #fbfaf8;
+
     p {
         margin-top: 30px;
         margin-left: 28px;
@@ -430,12 +434,15 @@ header {
     &:hover {
         background-color: #352f2d;
         color: #ffffff;
+
         p {
             color: #ffffff;
         }
+
         .themes {
             color: #c7b299;
         }
+
         img {
             filter: contrast(60%);
         }
@@ -451,6 +458,7 @@ header {
     background-color: #191919;
     background-image: url("../img/video.png");
     background-size: cover;
+
     h2 {
         font-size: 30px;
         color: #ffffff;
@@ -475,6 +483,7 @@ header {
         background-image: url("../img/icon-play.png");
         width: 100px;
         height: 100px;
+
         &:hover {
             filter: contrast(80%);
         }
@@ -490,6 +499,7 @@ header {
     height: 696px;
     padding: 0 360px;
     justify-content: space-evenly;
+
     .illustration {
         align-self: flex-end;
         background-image: url("../img/iphone.png");
@@ -503,6 +513,7 @@ header {
     justify-content: center;
     flex-direction: column;
     height: 100%;
+
     h2 {
         font-size: 30px;
         color: #555555;
@@ -545,6 +556,7 @@ header {
     display: flex;
     gap: 105px;
     font-family: "montserrat-light", "Arial", sans-serif;
+
     li {
         display: flex;
         align-items: center;
@@ -556,6 +568,7 @@ header {
         line-height: 36px;
         color: #ffffff;
     }
+
     p {
         margin-top: 21px;
         font-size: 14px;
@@ -565,27 +578,27 @@ header {
     }
 }
 
-.satisfied-clients{
+.satisfied-clients {
     background-image: url("../img/icons/satisfied.svg");
     width: 44px;
 }
 
-.cups-coffee{
+.cups-coffee {
     background-image: url("../img/icons/cups-coffee.svg");
     width: 48px;
 }
 
-.blog-posts{
+.blog-posts {
     background-image: url("../img/icons/posts.svg");
     width: 44px;
 }
 
-.likes{
+.likes {
     background-image: url("../img/icons/likes.svg");
     width: 44px;
 }
 
-.we-launched{
+.we-launched {
     background-image: url("../img/icons/we-launched.svg");
     width: 54px;
 }
@@ -613,6 +626,7 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
+
     h2 {
         margin: 81px 0 30px 0;
     }
@@ -663,6 +677,7 @@ header {
         top: 20px;
         left: 20px;
     }
+
     .day {
         width: 50px;
         height: 35px;
@@ -675,6 +690,7 @@ header {
         text-align: center;
         transition: 0.2s ease-in-out;
     }
+
     .month {
         width: 50px;
         height: 25px;
@@ -727,9 +743,11 @@ header {
 
 .post:hover {
     background-color: #352f2d;
+
     .day {
         background-color: #c7b199;
     }
+
     .month {
         background-color: #a48d71;
     }
@@ -773,10 +791,10 @@ header {
     background-color: #191919;
     background-image: url("/img/bg_logos.png");
     background-size: cover;
+
     ul {
         display: flex;
         gap: 90px;
-        // height: 100%;
     }
 
     li {
@@ -815,6 +833,7 @@ header {
     width: 258px;
     margin-top: 80px;
     height: auto;
+
     span {
         font-size: 34px;
         letter-spacing: -1px;
@@ -903,13 +922,16 @@ header {
 
 .twitter-post {
     margin-bottom: 40px;
+
     &:hover {
         p {
             color: #c7b299;
         }
+
         span {
             color: white;
         }
+
         a {
             color: #bdf1ff;
         }
@@ -918,10 +940,12 @@ header {
 
 .recent-news {
     margin-bottom: 41px;
+
     &:hover {
         p {
             color: #c7b299;
         }
+
         span {
             color: white;
         }
@@ -935,15 +959,17 @@ header {
     height: 112px;
     background-color: #101010;
     padding: 0 374px;
+
     ul {
         display: flex;
         padding: 0 10px;
         gap: 20px;
-        line-gap-override: black;
         color: #555555;
     }
+
     a {
         color: #555555;
+
         &:hover {
             color: #252525;
         }
@@ -977,6 +1003,7 @@ header {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+
     &:hover,
     &:focus {
         color: black;
@@ -1006,6 +1033,7 @@ button[type="submit"] {
     color: white;
     border: 5px solid black;
     cursor: pointer;
+    
     &:hover {
         background-color: #45a049;
     }
