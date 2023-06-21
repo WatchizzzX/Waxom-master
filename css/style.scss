@@ -126,7 +126,7 @@ header {
     align-items: center;
     padding-top: 55px;
 }
-.test{
+.test {
     fill: #00bff3;
 }
 
@@ -448,6 +448,7 @@ header {
     align-items: center;
     flex-direction: column;
     height: 706px;
+    background-color: #191919;
     background-image: url("../img/video.png");
     background-size: cover;
     h2 {
@@ -471,16 +472,15 @@ header {
     }
 
     button {
+        background-image: url("../img/icon-play.png");
+        width: 100px;
+        height: 100px;
         &:hover {
-            img {
-                filter: contrast(80%);
-            }
+            filter: contrast(80%);
         }
 
         &:active {
-            img {
-                filter: contrast(60%);
-            }
+            filter: contrast(60%);
         }
     }
 }
@@ -565,8 +565,33 @@ header {
     }
 }
 
+.satisfied-clients{
+    background-image: url("../img/icons/satisfied.svg");
+    width: 44px;
+}
+
+.cups-coffee{
+    background-image: url("../img/icons/cups-coffee.svg");
+    width: 48px;
+}
+
+.blog-posts{
+    background-image: url("../img/icons/posts.svg");
+    width: 44px;
+}
+
+.likes{
+    background-image: url("../img/icons/likes.svg");
+    width: 44px;
+}
+
+.we-launched{
+    background-image: url("../img/icons/we-launched.svg");
+    width: 54px;
+}
+
 .statistic-icon {
-    fill: #c7b299;
+    height: 44px;
     margin-bottom: 30px;
 }
 
@@ -745,6 +770,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 490px;
+    background-color: #191919;
     background-image: url("/img/bg_logos.png");
     background-size: cover;
     ul {
