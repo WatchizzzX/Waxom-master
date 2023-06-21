@@ -1,12 +1,12 @@
 //Анимация
 AOS.init();
 
-var modal = document.getElementById("myModal");
-var modal2 = document.getElementById("myModal2");
-var btn = document.getElementById("openModalBtn");
-var btn2 = document.getElementById("openModalBtn2");
-var closeBtn = document.getElementsByClassName("close")[0];
-var closeBtn2 = document.getElementsByClassName("close")[1];
+const modal = document.getElementById("myModal");
+const modal2 = document.getElementById("myModal2");
+const btn = document.getElementById("openModalBtn");
+const btn2 = document.getElementById("openModalBtn2");
+const closeBtn = document.getElementsByClassName("close")[0];
+const closeBtn2 = document.getElementsByClassName("close")[1];
 var isOpen = false; // Флаг для отслеживания состояния первого модального окна
 var isOpen2 = false; // Флаг для отслеживания состояния второго модального окна
 
@@ -19,7 +19,7 @@ btn.onclick = function() {
     // document.body.style.overflow = "hidden"; // Блокировка прокрутки заднего фона
 
     // Задержка перед закрытием первого модального окна (в миллисекундах)
-    var delayInMilliseconds = 500;
+    const delayInMilliseconds = 500;
     setTimeout(function() {
       isOpen = false;
       modal.classList.remove('animatedIn')
@@ -38,7 +38,7 @@ btn2.onclick = function() {
     // document.body.style.overflow = "hidden"; // Блокировка прокрутки заднего фона
 
     // Задержка перед закрытием второго модального окна (в миллисекундах)
-    var delayInMilliseconds = 500;
+    const delayInMilliseconds = 500;
     setTimeout(function() {
       isOpen2 = false;
       modal2.classList.remove('animatedIn')
@@ -82,38 +82,38 @@ window.onclick = function(event) {
 
 
 document.getElementById("searchButton2").onclick = function() {
-  var searchInput = document.getElementById("searchInput2");
-  var searchResults = document.getElementById("searchResults2");
+  const searchInput = document.getElementById("searchInput2");
+  const searchResults = document.getElementById("searchResults2");
 
   // Выполняем поиск и отображаем результаты
-  var searchText = searchInput.value;
+  const searchText = searchInput.value;
   searchResults.innerHTML = "Результаты поиска для \"" + searchText + "\"";
 }
 
 
 // Инициализация Cleave.js для форматирования полей
-var phoneInput = document.getElementById('phone');
-var birthdateInput = document.getElementById('birthdate');
-var creditcardInput = document.getElementById('creditcard');
+const phoneInput = document.getElementById('phone');
+const birthdateInput = document.getElementById('birthdate');
+const creditcardInput = document.getElementById('creditcard');
 
-var phoneCleave = new Cleave(phoneInput, {
+const phoneCleave = new Cleave(phoneInput, {
     phone: true,
     phoneRegionCode: 'BY' 
 });
 
 // Инициализация Cleave.js для форматирования полей
-var birthdateCleave = new Cleave(birthdateInput, {
+const birthdateCleave = new Cleave(birthdateInput, {
     date: true,
     datePattern: ['d', 'm', 'Y']
 });
 
-var creditcardCleave = new Cleave(creditcardInput, {
+const creditcardCleave = new Cleave(creditcardInput, {
     creditCard: true
 });
 
 
 // Инициализация Parsley.js для проверки полей формы
-var form = document.getElementById('myForm');
+const form = document.getElementById('myForm');
 form.addEventListener('submit', function(event) {
     event.preventDefault();
     if (form.checkValidity()) {
@@ -125,7 +125,7 @@ $(document).ready(function () {
 });  
 
 // Очистка полей формы
-var clearButton = document.getElementById('clearButton');
+const clearButton = document.getElementById('clearButton');
 clearButton.onclick = function() {
     form.reset();
 }

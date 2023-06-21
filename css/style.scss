@@ -100,14 +100,9 @@ a {
     position: relative;
 }
 
-// ::-webkit-scrollbar {
-//     width: 0
-// }
-
-.mainSwiper {
+.swiper-wrapper {
     position: absolute;
-    width: 100vw;
-    height: 100%;
+    height: 100vh;
     z-index: -1;
     font-family: "montserrat-light", "Areal", sans-serif;
 }
@@ -117,9 +112,8 @@ a {
     margin-bottom: 40px;
 }
 
-.swiper-slide{
-    background-size:cover;
-    overflow-x: scroll;
+.swiper-slide {
+    background-size: cover;
 }
 
 .postSwiper {
@@ -134,21 +128,28 @@ header {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
     font-family: "raleway-medium", "Areal", sans-serif;
+    a {
+        display: flex;
+        align-items: center;
+    }
+
     span {
         font-size: 34px;
         letter-spacing: -1px;
         color: #ffffff;
     }
+
+    svg {
+        fill: white;
+    }
+
     &:hover {
-        cursor: pointer;
         svg {
-            fill: #c7b299; 
+            fill: #c7b299;
         }
         span {
-            color: #c7b299;;
+            color: #c7b299;
         }
     }
 }
@@ -168,10 +169,10 @@ header {
     }
 }
 
-.header-icons{
+.header-icons {
     display: flex;
     justify-content: center;
-    gap: 28px
+    gap: 28px;
 }
 
 .slogan {
@@ -445,7 +446,7 @@ header {
     flex-direction: column;
     height: 706px;
     background-image: url("../img/video.png");
-    background-size:cover;
+    background-size: cover;
     h2 {
         font-size: 30px;
         color: #ffffff;
@@ -606,11 +607,11 @@ header {
     position: relative;
     z-index: 0;
     height: 751px;
-// (чекает гит)
+
     .post {
         position: relative;
-        // height: 397px;
-        // width: 372px;
+        height: 397px;
+        width: 372px;
         background-color: rgba(119, 119, 119, 0);
         border: 1px solid #f8f8f8;
         transition: 0.2s ease-in-out;
@@ -742,7 +743,7 @@ header {
     align-items: center;
     height: 490px;
     background-image: url("/img/bg_logos.png");
-    background-size:cover;
+    background-size: cover;
     ul {
         display: flex;
         gap: 90px;
@@ -809,11 +810,11 @@ header {
         color: #d1d1d1;
     }
 
-    a{
+    a {
         color: white;
     }
 
-    a:hover{
+    a:hover {
         color: #c7b299;
     }
 }
@@ -849,7 +850,7 @@ header {
     }
 }
 
-.dribbble{
+.dribbble {
     margin-top: 110px;
     width: 284px;
     display: flex;
@@ -880,7 +881,7 @@ header {
         span {
             color: white;
         }
-        a{
+        a {
             color: #bdf1ff;
         }
     }
@@ -928,19 +929,20 @@ header {
     top: 0;
     width: 100vw;
     height: 100vh;
-    overflow-y:scroll;
+    overflow-y: scroll;
     background-color: rgba(0, 0, 0, 0.4);
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 60%;height: 70%;
-  }
-  
-  .close {
+    width: 60%;
+    height: 70%;
+}
+
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -948,26 +950,25 @@ header {
     cursor: pointer;
     &:hover,
     &:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
     }
-  }
-  
-  
-  label {
+}
+
+label {
     display: block;
     margin-bottom: 10px;
-  }
-  
-  input[type="text"] {
+}
+
+input[type="text"] {
     width: 100%;
     padding: 5px;
     margin-bottom: 10px;
-    font-family: 'montserrat-light', 'Arial', sans-serif;
-  }
-  
-  button[type="submit"] {
+    font-family: "montserrat-light", "Arial", sans-serif;
+}
+
+button[type="submit"] {
     width: 200px;
     margin-right: auto;
     height: 50px;
@@ -977,10 +978,9 @@ header {
     border: 5px solid black;
     cursor: pointer;
     &:hover {
-      background-color: #45a049;
+        background-color: #45a049;
     }
-  }
-  
+}
 
 .animatedIn {
     animation: flipIn 0.7s;
